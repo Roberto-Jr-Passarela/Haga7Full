@@ -1,0 +1,6 @@
+@import url(config.css);
+
+main {
+    background-color: var(--cor5);
+    color: white;
+}
