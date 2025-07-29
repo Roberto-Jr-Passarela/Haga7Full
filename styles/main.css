@@ -1,8 +1,1 @@
 @import url(config.css);
-
-
-main > section {
-    height: 500px;
-    width: 100vw;
-    padding:30px;
-}

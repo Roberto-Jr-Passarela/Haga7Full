@@ -1,25 +1,43 @@
 @import url(config.css);
 
 footer {
-    background-image: linear-gradient(to bottom, var(--cor6), var(--cor7));
-    color: var(--cor2);
+    background-image: linear-gradient(to bottom, var(--cor6), var(--cor7) );
+    color: var(--cor3);
+    text-align: center;
+    padding: 20px;
+}   
+footer > section#top > address {
     font-size: 1.2em;
-    margin-bottom: 0px;
-    padding: 10px;
-}
-footer > small {
-    font-size: 0.7em;
-}
-section#top {
-  display: flex;              /* Coloca os filhos lado a lado */
-  justify-content: center;    /* Centraliza horizontalmente */
-  align-items: center;        /* Centraliza verticalmente (se quiser) */
-  height: 150px;              /* Ocupa toda a altura da tela */
-  gap: 20px;   
-}
-article {
-    text-align: center;
-}
-section#bottom {
-    text-align: center;
+    margin: 0px 30px 30px 30px;
+} 
+footer > section#top > address > p > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor1);
+    padding: 5px 20px 5px 15px;
+    transition: all 0.5s ease;
+} 
+footer > section#top > address > p > a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+    border-radius: 30px 0px;
+    background-color: var(--cor3);
+    color: var(--cor6);
+}  
+@media (max-width: 1080px){
+    footer {
+        color: var(--cor3);
+        text-align: center;
+        padding: 10px;
+    }   
+    footer > section#top > address {
+        font-size: 0.8em;
+        margin: 0px 10px 15px 10px;
+    } 
+    footer > section#top > address > p > a {
+        padding: 5px 15px 5px 10px;
+    } 
+    footer > section#top > address > p > a:hover {
+        border-radius: 20px 0px;
+    } 
 }

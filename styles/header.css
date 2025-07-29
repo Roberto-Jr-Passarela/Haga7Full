@@ -1,35 +1,122 @@
-@import url(config.css);
+@import url(config.css); /* Importa um arquivo externo com variáveis CSS ou configurações globais */
 
-header {
-    background-image: linear-gradient(to bottom,var(--cor6), var(--cor7)  );
-    color: var(--cor3);
-    text-align: center;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    gap: 10px;
-    padding: 30px;
+
+/* ---------- HEADER PRINCIPAL ---------- */
+
+header.header-principal {
+  background-image: linear-gradient(to bottom, var(--cor6), var(--cor7)); /* Gradiente de fundo com variáveis */
+  color: var(--cor3);                                                    /* Cor do texto vinda das variáveis */
+  height: 100px;                                                        /* Altura fixa do cabeçalho */
+  width: 100%;                                                         /* Largura total da tela */
+  display: flex;                                                      /* Flexbox: organiza o conteúdo em linha */
+  justify-content: space-between;                                    /* Espaça os filhos (h1 e nav) nas extremidades */
+  align-items: center;                                              /* Alinha verticalmente no centro */
+  padding: 0 50px;                                                 /* Espaçamento interno nas laterais */
+  overflow: hidden;                                               /* Garante que nenhuma animação ultrapasse os limites */
 }
-header > h1 {
-    font-weight: bold;
-    font-size: 3em;
-    margin-right: 10PX;
+
+
+/* ---------- TÍTULO H1 COM ANIMAÇÃO DA ESQUERDA ---------- */
+
+header.header-principal > h1 {
+  font-size: 3em;                                            /* Tamanho grande para o título */
+  font-weight: bolder;                                      /* Deixa o título em negrito */
+  margin: 0;                                               /* Remove margens externas padrão */
+  opacity: 0;                                             /* Começa invisível */
+  animation: slideInLeft 1.5s ease-out forwards;         /* Animação para entrar da esquerda em 1.5s e permanecer visível */
 }
-nav {
-    padding: 1%;
+
+
+/* ---------- NAVEGAÇÃO NAV COM ANIMAÇÃO DA DIREITA ---------- */
+
+header.header-principal > nav {
+  display: flex;                                     /* Exibe os links lado a lado */
+  gap: 20px;                                        /* Espaçamento entre os links */
+  opacity: 0;                                      /* Começa invisível */
+  animation: slideInRight 1.5s ease-out forwards; /* Animação para entrar da direita em 1.5s e permanecer visível */
 }
-nav > a {
-    color: var(--cor3);
-    text-decoration: none; 
-    padding: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  ;
-    font-size: 1.1em;
-    font-weight: bolder;  
+
+
+/* ---------- LINKS DO MENU ---------- */
+
+header.header-principal > nav > a {
+  text-decoration: none;            /* Remove o sublinhado dos links */
+  font-size: 1.2em;                /* Aumenta o tamanho da fonte */
+  color: var(--cor3);             /* Usa a cor definida na variável */
+  font-weight: normal;           /* Peso da fonte padrão */
+  padding: 10px;                /* Espaçamento interno para clique e estética */
+  transition: all 0.3s ease;   /* Transição suave ao passar o mouse em qualquer propriedade que mudar */
 }
-nav > a:hover {
-    color: var(--cor6);
-    background-color: var(--cor3);
-    border-radius: 40px;
+
+
+/* ---------- EFEITO AO PASSAR O MOUSE NOS LINKS ---------- */
+
+header.header-principal > nav > a:hover {
+  background-color: var(--cor3);   /* Muda a cor de fundo no hover */
+  color: var(--cor6);             /* Muda a cor do texto no hover */
+  border-radius: 30px 0px;       /* Arredonda apenas o canto superior esquerdo e inferior esquerdo */
+}
+
+
+/* ---------- KEYFRAMES: ANIMAÇÕES ---------- */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);  /* Começa fora da tela, à esquerda */
+    opacity: 0;                   /* Invisível no início */
+  }
+  to {
+    transform: translateX(0);      /* Termina no lugar normal */
+    opacity: 1;                   /* Totalmente visível */
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);   /* Começa fora da tela, à direita */
+    opacity: 0;                   /* Invisível no início */
+  }
+  to {
+    transform: translateX(0);      /* Termina no lugar normal */
+    opacity: 1;                   /* Totalmente visível */
+  }
+}
+
+
+/* ---------- RESPONSIVO (TELAS MENORES QUE 1080px) ---------- */
+
+@media (max-width: 1080px) {                     /* Aplica o estilo apenas quando a largura da tela for menor que 1080px */
+
+  header.header-principal {
+    flex-direction: column;                   /* Alinha os itens verticalmente (h1 em cima, nav embaixo) */
+    justify-content: center;                 /* Centraliza o conteúdo verticalmente dentro do header */
+    align-items: center;                    /* Centraliza os itens horizontalmente */
+    text-align: center;                    /* Alinha o texto ao centro */
+    height: auto;                         /* A altura se ajusta automaticamente ao conteúdo */
+    gap: 10px;                           /* Espaço entre o h1 e o nav */
+    padding: 15px;                      /* Reduz um pouco o padding para melhor visualização no mobile */
+  }
+
+}
+
+
+/* ---------- RESPONSIVO (TELAS MENORES QUE 650px) ---------- */
+
+@media (max-width: 650px) {                       /* Aplica o estilo apenas quando a largura da tela for menor que 650px */
+  
+  header.header-principal > nav {
+    font-size: 0.5em;                           /* Reduz o tamanho geral do menu */
+  }
+
+  header.header-principal > h1 {
+    font-size: 1.5em;                          /* Reduz o tamanho do título */
+  }
+
+  header.header-principal > nav > a {
+    padding: 5px;                             /* Reduz o espaçamento interno dos links */
+  }
+
+  header.header-principal > nav > a:hover {
+    border-radius: 15px 0px;                  /* Menor curvatura nos cantos para telas menores */
+  }
 }

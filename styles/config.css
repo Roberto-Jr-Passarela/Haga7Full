@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* ---------- CORES GERAIS ---------- */
 :root {
     --cor1 : #F2E2C4;
     --cor2 : #D9985F;
@@ -10,4 +11,14 @@
     --cor8 : white;
     --corExtre : #0e2605
 }
-* { margin: 0%; padding: 0%;}
+/* ---------- CONFIGURAÇÕES GERAIS ---------- */
+
+* {
+  box-sizing: border-box; /* Faz com que padding e border não ultrapassem a largura dos elementos */
+}
+
+html, body {
+  margin: 0;              /* Remove margens padrão do navegador */
+  padding: 0;             /* Remove preenchimento padrão do navegador */
+  overflow-x: hidden;     /* Impede rolagem horizontal (scroll lateral indesejado) */
+}
