@@ -78,3 +78,17 @@ body::after {
 body::after {
   animation: ativaConteudo 5s forwards;
 }
+
+@media (max-width: 1080px) {
+  /* Frase principal */
+  .slogan {
+    font-size: 2em;
+  }
+
+}
+@media (max-width: 650px) {
+  /* Frase principal */
+  .slogan {
+    font-size: 1.5em;
+  }
+}
