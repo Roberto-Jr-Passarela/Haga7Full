@@ -82,13 +82,13 @@ body::after {
 @media (max-width: 1080px) {
   /* Frase principal */
   .slogan {
-    font-size: 2em;
+    font-size: 3em;
   }
 
 }
 @media (max-width: 650px) {
   /* Frase principal */
   .slogan {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 }
