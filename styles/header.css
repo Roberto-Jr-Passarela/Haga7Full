@@ -23,7 +23,7 @@ header.header-principal > h1 {
   font-weight: bolder;                                      /* Deixa o título em negrito */
   margin: 0;                                               /* Remove margens externas padrão */
   opacity: 0;                                             /* Começa invisível */
-  animation: slideInLeft 6s ease-out forwards;           /* Animação para entrar da esquerda em 1.5s e permanecer visível */
+  animation: slideInLeft 7s ease-out forwards;           /* Animação para entrar da esquerda em 1.5s e permanecer visível */
 }
 
 
