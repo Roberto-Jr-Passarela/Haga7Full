@@ -1,9 +1,5 @@
-@import url(config.css);
+@import url(paginas-main/page1.css);
 
 
-main > section#page1 {
-    background-image: linear-gradient(to bottom, var(--cor6), var(--cor6));
-    color: var(--cor3);
-    justify-content: center;
-    align-items: center;
+main {
 }
