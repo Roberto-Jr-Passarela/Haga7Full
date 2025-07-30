@@ -1,0 +1,80 @@
+@import url(config.css);
+/* Esconde temporariamente todo o conteúdo do site */
+.conteudo {
+  opacity: 0; /* invisível */
+  pointer-events: none; /* impede clique durante esse tempo */
+  transition: opacity 1s ease; /* transição suave ao aparecer */
+}
+
+/* Área da frase principal */
+.intro {
+  display: flex;              /* para centralizar */
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  height: 100vh;              /* ocupa toda a altura da tela */
+  background-color: var(--cor1); /* fundo desejado */
+  position: fixed;            /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;              /* fica acima de todo o site */
+  animation: desaparecer 3s forwards; /* chama a animação abaixo */
+}
+
+/* Frase principal */
+.slogan {
+  font-size: 4em;
+  color: var(--cor6);
+  opacity: 1;
+  animation: fadeOut 3s forwards; /* começa visível e desaparece */
+}
+
+/* Faz a frase sumir suavemente */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Faz a tela da frase sumir e liberar o conteúdo */
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+/* Mostra o conteúdo depois de 5s */
+body.loaded .conteudo {
+  opacity: 1; /* mostra suavemente o conteúdo */
+  pointer-events: auto;
+}
+body::after {
+  content: icon;
+  animation: ativaConteudo 5s forwards;
+}
+
+@keyframes ativaConteudo {
+  100% {
+    /* Esse conteúdo é só para ativar o delay */
+  }
+}
+
+/* Após 5s, ativa a classe via seletor avançado (CSS Hack) */
+body::after {
+  animation: ativaConteudo 5s forwards;
+}

@@ -10,6 +10,9 @@ footer > section#top > address {
     font-size: 1.2em;
     margin: 0px 30px 30px 30px;
 } 
+footer > section#top > address > p {
+    margin-bottom: 20px;
+} 
 footer > section#top > address > p > a {
     text-decoration: none;
     font-weight: bold;
@@ -39,5 +42,8 @@ footer > section#top > address > p > a:hover {
     } 
     footer > section#top > address > p > a:hover {
         border-radius: 20px 0px;
+    } 
+    footer > section#top > address > p {
+    margin-bottom: 15px;
     } 
 }
