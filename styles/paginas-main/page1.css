@@ -10,8 +10,6 @@ main > section#page1 {
     align-items: center;
     gap: 10%;
 }
-main > section#page1 > div{
-}
 main > section#page1 > div > img {
     height: 300px;
     width: 300px;
