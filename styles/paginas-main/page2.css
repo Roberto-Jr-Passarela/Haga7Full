@@ -2,10 +2,8 @@
 
 main.conteudo > section#page2{
     background-color: var(--cor6);
-    
     color: var(--cor3);
     height: 400px;
-    
 } 
 main.conteudo > section#page2 div#titulo-principal-2 {
     background-color: var(--cor6);
@@ -14,13 +12,13 @@ main.conteudo > section#page2 div#titulo-principal-2 {
     font-size: 1.5em;
     padding: 30px;
 } 
-main.conteudo > section#page2 > div#for-baners {
+main.conteudo > section#page2 > div#baners1 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 } 
-main.conteudo > section#page2 > div#for-baners > div.baner {
+main.conteudo > section#page2 > div#baners1 > div.baner {
     background-image: linear-gradient(to top, var(--cor6), var(--cor7));
     border-radius: 50px;
     height: 280px;
@@ -29,16 +27,17 @@ main.conteudo > section#page2 > div#for-baners > div.baner {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid var(--cor3);
 } 
-main.conteudo > section#page2 > div#for-baners > div.baner > h3 {
+main.conteudo > section#page2 > div#baners1 > div.baner > h3 {
     font-size: 1.2em;
     margin-bottom: 30px;
     text-align: center;
 } 
-main.conteudo > section#page2 > div#for-baners > div.baner > ul{
+main.conteudo > section#page2 > div#baners1 > div.baner > ul{
     width: 150px;
     margin-left: 25px;
 } 
-main.conteudo > section#page2 > div#for-baners > div.baner > ul > li{
+main.conteudo > section#page2 > div#baners1 > div.baner > ul > li{
     margin-bottom: 10px;
 } 

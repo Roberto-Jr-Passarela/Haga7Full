@@ -1,2 +1,58 @@
 @import url(/styles/config.css);
 
+main.conteudo > section#page3 {
+    background-color: var(--cor6);
+}
+main.conteudo > section#page3 > div#titulo-principal-3 {
+    /*background-color: var(--cor6);*/
+    /*background-color: grey;*/
+    color: var(--cor3);
+    text-align: center;
+    padding: 30px;
+}
+main.conteudo > section#page3 > div#titulo-principal-3 > h2 {
+    font-size: 2.2em;
+    padding: 15px;
+}
+main.conteudo > section#page3 > div#titulo-principal-3 > p {
+    font-size: 1.2em;
+}
+main.conteudo > section#page3 > div#celulares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /*background-color: lightslategray;*/
+}
+main.conteudo > section#page3 > div#celulares > div.celular {
+    background-color: var(--cor6);
+    height: 480px;
+    width: 220px;
+    border: 1.5px solid rgb(217, 217, 217);
+    box-shadow: inset 0 0 0 6px black; /* Borda interna vermelha de 3px */
+    border-radius: 48px;
+    color: var(--cor3);
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 60px;
+}
+main.conteudo > section#page3 > div#celulares > div.celular > div.lente {
+    width: 60px;
+    height: 18px;
+    margin: auto;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+}
+main.conteudo > section#page3 > div#celulares > div.celular > div.lente > div.bolinha {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(28, 28, 28);
+    border-radius: 10px;
+    margin-left: 75%;
+    border: 0.1px solid rgb(0, 67, 93);
+}
