@@ -25,11 +25,11 @@ main.conteudo > section#page3 > div#celulares {
     /*background-color: lightslategray;*/
 }
 main.conteudo > section#page3 > div#celulares > div.celular {
-    background-color: var(--cor6);
+    background-image: linear-gradient(to bottom, var(--cor6), var(--cor7));
     height: 480px;
     width: 220px;
     border: 1.5px solid rgb(217, 217, 217);
-    box-shadow: inset 0 0 0 6px black; /* Borda interna vermelha de 3px */
+    box-shadow: inset 0 0 0 6px var(--cor7); /* Borda interna preta*/
     border-radius: 48px;
     color: var(--cor3);
     text-align: center;
@@ -42,11 +42,12 @@ main.conteudo > section#page3 > div#celulares > div.celular > div.lente {
     width: 60px;
     height: 18px;
     margin: auto;
-    background-color: black;
+    background-color: var(--cor7);
     border-radius: 20px;
     margin-top: 5%;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 main.conteudo > section#page3 > div#celulares > div.celular > div.lente > div.bolinha {
     width: 10px;
@@ -55,4 +56,26 @@ main.conteudo > section#page3 > div#celulares > div.celular > div.lente > div.bo
     border-radius: 10px;
     margin-left: 75%;
     border: 0.1px solid rgb(0, 67, 93);
+}
+main.conteudo > section#page3 > div#celulares > div.celular > h3 {
+    margin-bottom: 5px;
+}
+main.conteudo > section#page3 > div#celulares > div.celular > p {
+    width: 217px;
+    height: 100px;
+    padding: 15px;
+}
+main.conteudo > section#page3 > div#celulares > div.celular > div.imgt {
+    margin-top: 10px;
+    width: 217px;
+    height: 270px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main.conteudo > section#page3 > div#celulares > div.celular > div.imgt > img {
+    width: 217px;
+    height: 270px;
+    padding: 10px;
 }
