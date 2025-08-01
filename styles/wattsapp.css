@@ -1,0 +1,16 @@
+@import url(config.css);
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.5);
+}

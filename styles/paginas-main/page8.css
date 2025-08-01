@@ -1,0 +1,40 @@
+@import url(/styles/config.css);
+
+main.conteudo > section#page8 {
+    background-image: linear-gradient(to top, var(--cor6), var(--cor7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--cor3);
+    background-color: var(--cor6);
+    padding: 50px 50px 100px 50px;
+}
+main.conteudo > section#page8 > h2 {
+    font-size: 3em;
+    text-align: center;
+    width: 900px;
+    color: var(--cor8);
+}
+main.conteudo > section#page8 > a > button {
+    background: linear-gradient(135deg, var(--cor3), var(--cor4)); /* Fundo com gradiente diagonal usando variáveis de cor personalizadas */
+    height: 50px;
+    width: 400px;
+    margin-top: 15px; 
+    font-size: 1.3em;                                               /* Tamanho da fonte do texto do botão */
+    font-weight: bold;                                             /* Deixa o texto em negrito */
+    border: none;                                                  /* Remove a borda padrão do botão */
+    border-radius: 20px;                                           /* Arredonda os cantos do botão (25px) */
+    cursor: pointer;                                               /* Muda o cursor para a "mãozinha" ao passar sobre o botão */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);                   /* Sombra abaixo do botão, com leve transparência */
+    transition: all 0.5s ease;                                     /* Faz a transição suave de qualquer mudança de estilo em 0.8s */
+}
+main.conteudo > section#page8 > a > button:hover {
+    transform: scale(1.05);                                        /* Aumenta levemente o botão (105%) ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);                  /* Aumenta a sombra ao passar o mouse para destacar mais */
+    background: linear-gradient(135deg, var(--cor4), var(--cor3)); /* Inverte o gradiente das cores ao passar o mouse */
+    border: 3px solid var(--cor1);
+    color: var(--cor1);
+} 
+

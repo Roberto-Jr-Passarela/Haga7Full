@@ -1,1 +1,31 @@
 @import url(/styles/config.css);
+
+main.conteudo > section#page6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor3);
+    background-color: var(--cor6);
+    padding-bottom: 30px;
+}
+main.conteudo > section#page6 > div#titulo-principal-6  {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.3em;
+}
+main.conteudo > section#page6 > div#texto-principal-6  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+main.conteudo > section#page6 > div#texto-principal-6 > div {
+    width: 200px;
+    height: 160px;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid var(--cor3);
+    border-top: 5px solid var(--cor3);
+    padding: 10px;
+}
