@@ -5,27 +5,38 @@ main.conteudo > section#page6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     color: var(--cor3);
-    background-color: var(--cor6);
-    padding-bottom: 30px;
+    padding: 60px;
 }
 main.conteudo > section#page6 > div#titulo-principal-6  {
     text-align: center;
-    padding: 15px;
-    font-size: 1.3em;
 }
 main.conteudo > section#page6 > div#texto-principal-6  {
-    display: flex;
+    display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 main.conteudo > section#page6 > div#texto-principal-6 > div {
+    background-color: var(--cor7);
     width: 200px;
-    height: 160px;
+    height: 150px;
     border-radius: 50px;
     text-align: center;
     border: 2px solid var(--cor3);
     border-top: 5px solid var(--cor3);
     padding: 10px;
+}
+main.conteudo > section#page6 > div#texto-principal-6 > div > h3.titulo-principal-6-secundarios {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 1080px){
+    main.conteudo > section#page6{
+        padding: 30px;
+    } 
 }

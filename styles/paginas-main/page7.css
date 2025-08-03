@@ -1,36 +1,48 @@
 @import url(/styles/config.css);
 
 main.conteudo > section#page7 {
-    background-color: var(--cor6);
     color: var(--cor3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
     padding: 50px;
+    text-align: center;
 }
 main.conteudo > section#page7 > div#titulo-principal-7 {
     text-align: center;
-    font-size: 1.3em;
-}
-main.conteudo > section#page7 > div#texto-principal-7 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-main.conteudo > section#page7 > div#texto-principal-7 > p {
-    font-size: 0.9em;
+    /*font-size: 1.3em;*/
+    margin-bottom: 5px;
 }
 main.conteudo > section#page7 > div#imagens-plataformas {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    margin-top: 30px
 }
 main.conteudo > section#page7 > div#imagens-plataformas > img {
     width: 120px;
     height: 120px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 680px){
+    main.conteudo > section#page7{
+        padding: 30px;
+    }
+    main.conteudo > section#page7 > div#imagens-plataformas {
+        flex-wrap: wrap;
+    } 
+    main.conteudo > section#page7 > div#imagens-plataformas > img {
+    width: 90px;
+    height: 90px;
+    }   
 }
