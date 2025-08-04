@@ -1,25 +1,19 @@
 @import url(/styles/config.css);
 
-main.conteudo > section#page6 {
-    display: flex;
+#sc6 {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    color: var(--cor3);
-    padding: 60px;
 }
-main.conteudo > section#page6 > div#titulo-principal-6  {
+#txt-sc6 {
     text-align: center;
 }
-main.conteudo > section#page6 > div#texto-principal-6  {
+#baners-sc6  {
     display: flex; 
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 30px;
 }
-main.conteudo > section#page6 > div#texto-principal-6 > div {
+#baners-sc6 > div {
     background-color: var(--cor7);
     width: 200px;
     height: 150px;
@@ -29,14 +23,13 @@ main.conteudo > section#page6 > div#texto-principal-6 > div {
     border-top: 5px solid var(--cor3);
     padding: 10px;
 }
-main.conteudo > section#page6 > div#texto-principal-6 > div > h3.titulo-principal-6-secundarios {
+.baner-sc6{
     margin-top: 0px;
     margin-bottom: 30px;
 }
 
-
 @media (max-width: 1080px){
-    main.conteudo > section#page6{
+    #sc6{
         padding: 30px;
     } 
 }

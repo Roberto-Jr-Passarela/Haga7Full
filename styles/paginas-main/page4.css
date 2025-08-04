@@ -1,52 +1,43 @@
 @import url(/styles/config.css);
 
-main.conteudo > section#page4 {
-    color: var(--cor3);
-    display: flex;
+#sc4 {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 60px;
 }
-main.conteudo > section#page4 > div#titulo-principal-4{ 
-    /*font-size: ;   */
+#txt-sc4{ 
     text-align: center;
 }
-main.conteudo > section#page4 > div#baner2{  
+#baners-sc4{  
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
-main.conteudo > section#page4 > div#baner2 > div.mini-baners2{    
+.mini-baners-sc4 {  
     width: 200px;
+    height: 150px;
     border-radius: 40px 0px 40px 0px;
     border: 2px solid var(--cor3);
     border-top: 6px solid var(--cor3);
-    padding: 15px;
-      
+    padding: 15px; 
     background-color: var(--cor7);
 }
-main.conteudo > section#page4 > div#baner2 > div.mini-baners2 > h3{    
+.mini-baners-sc4 > h3{    
     text-align: center;
     margin-bottom: 15px;
-     /*font-size: ;   */
 }
-main.conteudo > section#page4 > div#baner2 > div.mini-baners2 > p{    
+.mini-baners-sc4 > p{    
     text-align: justify;
-     /*font-size: ;   */
 }
 
 
 @media (max-width: 1080px){
-    main.conteudo > section#page4{
+    #sc4{
         padding: 30px;
     } 
-    main.conteudo > section#page4 > div#baner2 > div.mini-baners2 {    
-    width: 120px;
-    height: 200px;
+    .mini-baners-sc4 {    
+    width: 150px;
+    height: 180px;
     border-radius: 40px 0px 40px 0px;
     border: 2px solid var(--cor3);
     border-top: 6px solid var(--cor3);

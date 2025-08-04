@@ -1,22 +1,19 @@
 @import url(/styles/config.css);
 
-main.conteudo > section#page2{
-    color: var(--cor3);
-    padding: 60px;
+#sc2{
+    flex-direction: column;
 } 
-main.conteudo > section#page2 div#titulo-principal-2 {
-    color: var(--cor3);
+#txt-sc2 {
     text-align: center;
-    margin-bottom: 30px;
 } 
-main.conteudo > section#page2 > div#baners1 {
+#baners-sc2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
 } 
-main.conteudo > section#page2 > div#baners1 > div.baner {
+.baner-sc2 {
     background-image: linear-gradient(to top, var(--cor6), var(--cor7));
     border-radius: 50px;
     height: 220px;
@@ -27,26 +24,26 @@ main.conteudo > section#page2 > div#baners1 > div.baner {
     flex-direction: column;
     align-items: center;
 } 
-main.conteudo > section#page2 > div#baners1 > div.baner > h3 {
+.baner-sc2 > h3 {
     text-align: center;
     margin-bottom: 20px;
 } 
-main.conteudo > section#page2 > div#baners1 > div.baner > ul{
+.baner-sc2 > ul{
     list-style: disc;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
     text-align: left;
 } 
 
 @media (max-width: 1080px){
-    main.conteudo > section#page2 { 
+    #sc2 { 
         padding: 30px;
     }
 }
 @media (max-width: 850px){
-    main.conteudo > section#page2 { 
+    #sc2 { 
        padding: 15px;
     }
 }

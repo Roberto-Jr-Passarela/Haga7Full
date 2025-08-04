@@ -1,35 +1,27 @@
 @import url(/styles/config.css);
 
-main.conteudo > section#page1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 60px 0px;
-}
-main.conteudo > section#page1 > div > img {
+#img-sc1 {
     height: 300px;
     width: 300px;
     border: 4px solid var(--cor3);
     border-radius: 25px; 
 }
-main.conteudo > section#page1 > div#texto-principal {
+#txt-sc1 {
     max-width: 450px;
     border: 2.5px solid var(--cor3);
     border-radius: 15px;
-    color: var(--cor3);
     padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
-main.conteudo > section#page1 > div#texto-principal > h1 {
+#txt-sc1 > h2 {
     text-align: center;
 }
-main.conteudo > section#page1 > div#texto-principal > p {
+#txt-sc1 > p {
     text-align: justify;
 }
-main.conteudo > section#page1 > div#texto-principal > a > button#botao-page1 {
+#botao-sc1 {
     background: linear-gradient(135deg, var(--cor3), var(--cor4)); /* Fundo com gradiente diagonal usando variáveis de cor personalizadas */
     height: 40px;
     width: 100%;
@@ -40,7 +32,7 @@ main.conteudo > section#page1 > div#texto-principal > a > button#botao-page1 {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);                   /* Sombra abaixo do botão, com leve transparência */
     transition: all 0.8s ease;                                     /* Faz a transição suave de qualquer mudança de estilo em 0.8s */
 }   
-main.conteudo > section#page1 > div#texto-principal > a > button#botao-page1:hover {
+#botao-sc1:hover {
     transform: scale(1.05);                                        /* Aumenta levemente o botão (105%) ao passar o mouse */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);                  /* Aumenta a sombra ao passar o mouse para destacar mais */
     background: linear-gradient(135deg, var(--cor4), var(--cor3)); /* Inverte o gradiente das cores ao passar o mouse */
@@ -49,16 +41,13 @@ main.conteudo > section#page1 > div#texto-principal > a > button#botao-page1:hov
 }
 
 @media (max-width: 1080px){
-    main.conteudo > section#page1 { 
-        padding: 30px 0px;
+    #sc1 { 
+        padding: 30px;
     }
 }
 @media (max-width: 850px){
-    main.conteudo > section#page1 { 
-       padding: 15px;
-    }
-    main.conteudo > section#page1 { 
-    flex-direction: column;
-    gap: 20px;
+    #sc1 { 
+        padding: 15px;
+        flex-direction: column;
     }
 }

@@ -1,52 +1,36 @@
 @import url(/styles/config.css);
 
-main.conteudo > section#page5 {
-    color: var(--cor3);
-    display: flex;
+#sc5 {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-    padding: 60px;
 }
-main.conteudo > section#page5 > div#titulo-principal-5 {
+#txt-sc5 > h2 {
     text-align: center;
-    /*font-size: 1.3em;*/
 }
-main.conteudo > section#page5 > div#texto-principal-5 {
+#txt-sc5 > p {
+    margin: auto;
     width: 85%;
     text-align: center;
-    margin-bottom: 30px;
     max-width: 600px;
 }
-main.conteudo > section#page5 > div#titulo-principal-5-secundarios > div#caixa-textos {
+#baners-sc5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
-main.conteudo > section#page5 > div#titulo-principal-5-secundarios > div#caixa-textos > h3{
+#baners-sc5 > h3{
     background-color: var(--cor7);
-    color: var(--cor1);
     border-radius: 15px 0px 15px 0px;
     border: 1px solid var(--cor3);
     border-top: 4px solid var(--cor3);
     padding: 10px;
     width: 300px;
+    margin-bottom: 0px;
 }
 
-
-
-
-
-
-
-
-
 @media (max-width: 1080px){
-    main.conteudo > section#page5{
+    #sc5 {
         padding: 30px;
     } 
 }
