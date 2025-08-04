@@ -21,6 +21,6 @@
 html, body {
   margin: 0px;            /* Remove margens padrão do navegador */
   padding: 0px;          /* Remove preenchimento padrão do navegador */
-  /*overflow-x: hidden;   /* Impede rolagem horizontal (scroll lateral indesejado) */
+  overflow-x: hidden;   /* Impede rolagem horizontal (scroll lateral indesejado) */
   scroll-behavior: smooth;
 }
