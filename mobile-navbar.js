@@ -20,12 +20,14 @@ class MobileNavbar {
   handleClick() {
     this.navList.classList.toggle(this.activeClass);
     this.mobileMenu.classList.toggle(this.activeClass);
+    document.body.classList.toggle("body-menu-open"); // 👈 aqui
     this.animateLinks();
   }
 
   closeMenuOnLinkClick() {
     this.navList.classList.remove(this.activeClass);
     this.mobileMenu.classList.remove(this.activeClass);
+    document.body.classList.remove("body-menu-open"); // 👈 e aqui
     this.navLinks.forEach(link => (link.style.animation = ""));
   }
 
