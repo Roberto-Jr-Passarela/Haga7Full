@@ -6,15 +6,14 @@ class MobileNavbar {
     this.activeClass = "active";
 
     this.handleClick = this.handleClick.bind(this);
+    this.closeMenuOnLinkClick = this.closeMenuOnLinkClick.bind(this);
   }
 
   animateLinks() {
     this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`);
+      link.style.animation = link.style.animation
+        ? ""
+        : `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
     });
   }
 
@@ -24,21 +23,33 @@ class MobileNavbar {
     this.animateLinks();
   }
 
+  closeMenuOnLinkClick() {
+    this.navList.classList.remove(this.activeClass);
+    this.mobileMenu.classList.remove(this.activeClass);
+    this.navLinks.forEach(link => (link.style.animation = ""));
+  }
+
   addClickEvent() {
     this.mobileMenu.addEventListener("click", this.handleClick);
+
+    // 🔧 Aqui adiciona o evento de fechar ao clicar em qualquer link
+    this.navLinks.forEach(link => {
+      link.addEventListener("click", this.closeMenuOnLinkClick);
+    });
   }
 
   init() {
-    if (this.mobileMenu) {
+    if (this.mobileMenu && this.navList && this.navLinks.length) {
       this.addClickEvent();
     }
     return this;
   }
 }
 
+// ⛔ Aqui você usou ".nav-list li" (que são as <li>), CORRIJA para os links <a>:
 const mobileNavbar = new MobileNavbar(
   ".mobile-menu",
   ".nav-list",
-  ".nav-list li",
+  ".nav-list li a" // <-- CORRETO: links, não li
 );
 mobileNavbar.init();

@@ -13,14 +13,8 @@
 }
 /* ---------- CONFIGURAÇÕES GERAIS ---------- */
 * {
-  box-sizing: border-box; /* Faz com que padding e border não ultrapassem a largura dos elementos */
   margin: 0px;           /* Remove margens padrão do navegador */
   padding: 0px;         /* Remove preenchimento padrão do navegador */
-}
-
-html, body {
-  margin: 0px;            /* Remove margens padrão do navegador */
-  padding: 0px;          /* Remove preenchimento padrão do navegador*/
   scroll-behavior: smooth;
-  
+  box-sizing: border-box; /* Faz com que padding e border não ultrapassem a largura dos elementos */
 }
