@@ -41,7 +41,7 @@ header.header-principal > nav {
 
 header.header-principal > nav > a {
   text-decoration: none;            /* Remove o sublinhado dos links */
-  font-size: 1.2em;                /* Aumenta o tamanho da fonte */
+  font-size: 1.4em;                /* Aumenta o tamanho da fonte */
   color: var(--cor3);             /* Usa a cor definida na variável */
   font-weight: normal;           /* Peso da fonte padrão */
   padding: 10px;                /* Espaçamento interno para clique e estética */
@@ -105,7 +105,7 @@ header.header-principal > nav > a:hover {
 @media (max-width: 650px) {                       /* Aplica o estilo apenas quando a largura da tela for menor que 650px */
   
   header.header-principal > nav {
-    font-size: 0.5em;                           /* Reduz o tamanho geral do menu */
+    font-size: 0.8em;                           /* Reduz o tamanho geral do menu */
   }
 
   header.header-principal > h1 {

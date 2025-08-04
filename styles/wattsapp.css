@@ -14,3 +14,9 @@
 .whatsapp-float:hover {
   transform: scale(1.5);
 }
+
+@media (max-width: 1080px) {
+  .whatsapp-float {
+    margin-right: 10px;
+  }
+}

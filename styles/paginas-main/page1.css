@@ -1,8 +1,8 @@
 @import url(/styles/config.css);
 
 #img-sc1 {
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    max-width: 300px;
     border: 4px solid var(--cor3);
     border-radius: 25px; 
 }
@@ -14,9 +14,6 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-}
-#txt-sc1 > h2 {
-    text-align: center;
 }
 #txt-sc1 > p {
     text-align: justify;
@@ -39,15 +36,14 @@
     border: 3px solid var(--cor1);
     color: var(--cor1);
 }
-
-@media (max-width: 1080px){
-    #sc1 { 
-        padding: 30px;
-    }
-}
 @media (max-width: 850px){
     #sc1 { 
-        padding: 15px;
         flex-direction: column;
     }
+}
+@media (max-width: 300px){
+    #img-sc1 {
+    max-height: 200px;
+    max-width: 200px;
+    }   
 }

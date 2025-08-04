@@ -27,9 +27,3 @@
     margin-top: 0px;
     margin-bottom: 30px;
 }
-
-@media (max-width: 1080px){
-    #sc6{
-        padding: 30px;
-    } 
-}

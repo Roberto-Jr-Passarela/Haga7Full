@@ -25,7 +25,6 @@
     align-items: center;
 } 
 .baner-sc2 > h3 {
-    text-align: center;
     margin-bottom: 20px;
 } 
 .baner-sc2 > ul{
@@ -36,14 +35,3 @@
     gap: 15px;
     text-align: left;
 } 
-
-@media (max-width: 1080px){
-    #sc2 { 
-        padding: 30px;
-    }
-}
-@media (max-width: 850px){
-    #sc2 { 
-       padding: 15px;
-    }
-}

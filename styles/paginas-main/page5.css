@@ -3,9 +3,6 @@
 #sc5 {
     flex-direction: column;
 }
-#txt-sc5 > h2 {
-    text-align: center;
-}
 #txt-sc5 > p {
     margin: auto;
     width: 85%;
@@ -29,8 +26,8 @@
     margin-bottom: 0px;
 }
 
-@media (max-width: 1080px){
-    #sc5 {
-        padding: 30px;
-    } 
+@media (max-width: 320px){
+    #baners-sc5 > h3{
+        width: 175px;
+    }
 }

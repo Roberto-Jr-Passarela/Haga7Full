@@ -2,7 +2,6 @@
 
 #sc7 {
     flex-direction: column;
-    text-align: center;
 }
 #txt-sc7 {
     text-align: center;
@@ -19,9 +18,6 @@
 }
 
 @media (max-width: 680px){
-    #sc7{
-        padding: 30px;
-    }
     #img-sc7 {
         flex-wrap: wrap;
     } 
