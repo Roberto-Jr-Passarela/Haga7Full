@@ -1,122 +1,102 @@
 @import url(config.css); /* Importa um arquivo externo com variáveis CSS ou configurações globais */
 
-
-/* ---------- HEADER PRINCIPAL ---------- */
-
-header.header-principal {
-  background-image: linear-gradient(to bottom, var(--cor6), var(--cor7)); /* Gradiente de fundo com variáveis */
-  color: var(--cor3);                                                    /* Cor do texto vinda das variáveis */
-  height: 100px;                                                        /* Altura fixa do cabeçalho */
-  width: 100%;                                                         /* Largura total da tela */
-  display: flex;                                                      /* Flexbox: organiza o conteúdo em linha */
-  justify-content: space-between;                                    /* Espaça os filhos (h1 e nav) nas extremidades */
-  align-items: center;                                              /* Alinha verticalmente no centro */
-  padding: 0 50px;                                                 /* Espaçamento interno nas laterais */
-  overflow: hidden;                                               /* Garante que nenhuma animação ultrapasse os limites */
+a {
+  color: var(--cor3);
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-
-/* ---------- TÍTULO H1 COM ANIMAÇÃO DA ESQUERDA ---------- */
-
-header.header-principal > h1 {
-  font-size: 3em;                                            /* Tamanho grande para o título */
-  font-weight: bolder;                                      /* Deixa o título em negrito */
-  margin: 0;                                               /* Remove margens externas padrão */
-  opacity: 0;                                             /* Começa invisível */
-  animation: slideInLeft 7s ease-out forwards;           /* Animação para entrar da esquerda em 1.5s e permanecer visível */
+a:hover {
+  opacity: 0.7;
 }
 
-
-/* ---------- NAVEGAÇÃO NAV COM ANIMAÇÃO DA DIREITA ---------- */
-
-header.header-principal > nav {
-  display: flex;                                     /* Exibe os links lado a lado */
-  gap: 20px;                                        /* Espaçamento entre os links */
-  opacity: 0;                                      /* Começa invisível */
-  animation: slideInRight 6s ease-out forwards;   /* Animação para entrar da direita em 1.5s e permanecer visível */
+.logo {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
-
-/* ---------- LINKS DO MENU ---------- */
-
-header.header-principal > nav > a {
-  text-decoration: none;            /* Remove o sublinhado dos links */
-  font-size: 1.4em;                /* Aumenta o tamanho da fonte */
-  color: var(--cor3);             /* Usa a cor definida na variável */
-  font-weight: normal;           /* Peso da fonte padrão */
-  padding: 10px;                /* Espaçamento interno para clique e estética */
-  transition: all 0.3s ease;   /* Transição suave ao passar o mouse em qualquer propriedade que mudar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to bottom, var(--cor6), var(--cor7));
+  height: 10vh;
 }
 
-
-/* ---------- EFEITO AO PASSAR O MOUSE NOS LINKS ---------- */
-
-header.header-principal > nav > a:hover {
-  background-color: var(--cor3);   /* Muda a cor de fundo no hover */
-  color: var(--cor6);             /* Muda a cor do texto no hover */
-  border-radius: 30px 0px;       /* Arredonda apenas o canto superior esquerdo e inferior esquerdo */
+.nav-list {
+  list-style: none;
+  display: flex;
 }
 
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
 
-/* ---------- KEYFRAMES: ANIMAÇÕES ---------- */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
 
-@keyframes slideInLeft {
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: var(--cor3);
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 50vw;
+    height: 90vh;
+    background-image: linear-gradient(to bottom, var(--cor6), var(--cor7));
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
   from {
-    transform: translateX(-100%);  /* Começa fora da tela, à esquerda */
-    opacity: 0;                   /* Invisível no início */
+    opacity: 0;
+    transform: translateX(50px);
   }
   to {
-    transform: translateX(0);      /* Termina no lugar normal */
-    opacity: 1;                   /* Totalmente visível */
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);   /* Começa fora da tela, à direita */
-    opacity: 0;                   /* Invisível no início */
-  }
-  to {
-    transform: translateX(0);      /* Termina no lugar normal */
-    opacity: 1;                   /* Totalmente visível */
-  }
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
 }
 
-
-/* ---------- RESPONSIVO (TELAS MENORES QUE 1080px) ---------- */
-
-@media (max-width: 1080px) {                     /* Aplica o estilo apenas quando a largura da tela for menor que 1080px */
-
-  header.header-principal {
-    flex-direction: column;                   /* Alinha os itens verticalmente (h1 em cima, nav embaixo) */
-    justify-content: center;                 /* Centraliza o conteúdo verticalmente dentro do header */
-    align-items: center;                    /* Centraliza os itens horizontalmente */
-    text-align: center;                    /* Alinha o texto ao centro */
-    height: auto;                         /* A altura se ajusta automaticamente ao conteúdo */
-    gap: 10px;                           /* Espaço entre o h1 e o nav */
-    padding: 15px;                      /* Reduz um pouco o padding para melhor visualização no mobile */
-  }
-
+.mobile-menu.active .line2 {
+  opacity: 0;
 }
 
-
-/* ---------- RESPONSIVO (TELAS MENORES QUE 650px) ---------- */
-
-@media (max-width: 650px) {                       /* Aplica o estilo apenas quando a largura da tela for menor que 650px */
-  
-  header.header-principal > nav {
-    font-size: 0.8em;                           /* Reduz o tamanho geral do menu */
-  }
-
-  header.header-principal > h1 {
-    font-size: 1.5em;                          /* Reduz o tamanho do título */
-  }
-
-  header.header-principal > nav > a {
-    padding: 5px;                             /* Reduz o espaçamento interno dos links */
-  }
-
-  header.header-principal > nav > a:hover {
-    border-radius: 15px 0px;                  /* Menor curvatura nos cantos para telas menores */
-  }
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
 }
