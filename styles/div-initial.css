@@ -23,8 +23,6 @@
 
 /* Frase principal */
 .slogan {
-  font-size: 4em;
-  color: var(--cor6);
   opacity: 1;
   animation: fadeOut 3s forwards; /* começa visível e desaparece */
 }
@@ -77,18 +75,4 @@ body::after {
 /* Após 5s, ativa a classe via seletor avançado (CSS Hack) */
 body::after {
   animation: ativaConteudo 5s forwards;
-}
-
-@media (max-width: 1080px) {
-  /* Frase principal */
-  .slogan {
-    font-size: 3em;
-  }
-
-}
-@media (max-width: 650px) {
-  /* Frase principal */
-  .slogan {
-    font-size: 1.5em;
-  }
 }

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*CONFIGURAÇÕES PARA AS CORES DE CADA FONTE, TAMNHO, E TIPOLOGIGA*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 /* ---------- CORES GERAIS ---------- */
 :root {
     --cor1 : #F2E2C4;
@@ -17,4 +19,82 @@
   padding: 0px;         /* Remove preenchimento padrão do navegador */
   scroll-behavior: smooth;
   box-sizing: border-box; /* Faz com que padding e border não ultrapassem a largura dos elementos */
+}
+
+/*Padronizados*/
+h1 {
+  font-family: 'Cinzel', serif;
+  color: var(--cor6);
+}
+h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--cor3);
+}
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--cor3);
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor1);
+}
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor3);
+}
+/*--------------------------------------------------*/
+
+/*Header*/
+nav > a, li > a {
+  color: var(--cor3);
+}
+li > a {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+}
+.logo {
+  font-family: 'Cinzel', serif;
+  font-weight: lighter;
+  font-size: 2em;
+}
+/*--------------------------------------------------*/
+
+
+/*Div inicial */
+.slogan {
+  font-size: 4em;
+  /*color: var(--cor6);*/
+  /*color: olive;*/
+}
+/*--------------------------------------------------*/
+
+
+/*Footer*/
+small {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor8);
+}
+footer > address > p >  a {
+  font-weight: bolder;
+  color: violet;
+  color: var(--cor3);
+}
+/*--------------------------------------------------*/
+
+
+
+/*Rensposividade*/
+@media (max-width: 1080px) {
+  /* Div inicial */
+  .slogan {
+    font-size: 3em;
+  }
+
+}
+@media (max-width: 650px) {
+  /* Div inicial */
+  .slogan {
+    font-size: 1.5em;
+  }
 }

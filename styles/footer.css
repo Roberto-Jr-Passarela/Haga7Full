@@ -14,13 +14,9 @@ footer > address {
     justify-content: center;
     gap: 20px;
 } 
-footer > small {
-    font-family: monospace;
-    color: var(--cor8);
-}
+
 footer > address > p > a {
     text-decoration: none;
-    font-weight: bold;
     padding: 5px 20px 5px 15px;
     transition: all 0.5s ease;
 } 

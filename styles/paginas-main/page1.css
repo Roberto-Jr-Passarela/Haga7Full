@@ -15,27 +15,18 @@
     flex-direction: column;
     gap: 30px;
 }
+
 #txt-sc1 > p {
     text-align: justify;
 }
+
+/* Botão 1 */
 #botao-sc1 {
-    background: linear-gradient(135deg, var(--cor3), var(--cor4)); /* Fundo com gradiente diagonal usando variáveis de cor personalizadas */
-    height: 60px;
-    padding: 20px 50px;
-    font-weight: bolder;                                             /* Deixa o texto em negrito */
-    border: none;                                                  /* Remove a borda padrão do botão */
-    border-radius: 50px 0px;                                           /* Arredonda os cantos do botão (25px) */
-    cursor: pointer;                                               /* Muda o cursor para a "mãozinha" ao passar sobre o botão */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);                   /* Sombra abaixo do botão, com leve transparência */
-    transition: all 0.8s ease;                                     /* Faz a transição suave de qualquer mudança de estilo em 0.8s */
-}   
-#botao-sc1:hover {
-    transform: scale(1.1);                                        /* Aumenta levemente o botão (105%) ao passar o mouse */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);                  /* Aumenta a sombra ao passar o mouse para destacar mais */
-    background: linear-gradient(135deg, var(--cor4), var(--cor3)); /* Inverte o gradiente das cores ao passar o mouse */
-    border: 3px solid var(--cor1);
-    color: var(--cor1);
+  padding: 20px 50px;
+  border-radius: 50px 0px;
 }
+
+
 @media (max-width: 850px){
     #sc1 { 
         flex-direction: column;
@@ -43,7 +34,7 @@
 }
 @media (max-width: 300px){
     #img-sc1 {
-    max-height: 200px;
-    max-width: 200px;
+        max-height: 200px;
+        max-width: 200px;
     }   
 }

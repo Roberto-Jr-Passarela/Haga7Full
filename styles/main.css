@@ -7,7 +7,6 @@
 @import url(paginas-main/page7.css);
 @import url(paginas-main/page8.css);
 
-
 #sc1,#sc2,#sc3,#sc4,#sc5,#sc6,#sc7,#sc8 {
     display: flex;
     justify-content: center;
@@ -30,39 +29,54 @@
     }
 }
 
-h1 {
-  /*color: greenyellow;*/
-  color: var(--cor3);
-}
 h2 {
-  /*color: gold;*/
   margin-bottom: 15px;
-  color: var(--cor3);
-  font-size: 30px;
   text-align: center;
 }
 h3 {
-  /*color: aqua;*/
   margin-bottom: 30px;
-  color: var(--cor3);
   text-align: center;
 }
-p {
-  /*color: red;*/
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--cor1);
+a {
+  text-decoration: none;
 }
-li {
-  /*color: purple;*/
-  color: var(--cor3);
-}
+
 
 @media (max-width: 650px){
   h2 {
     margin-bottom: 10px;
-    font-size: 25px;
   }
   h3 {
     margin-bottom: 20px;
   }
+}
+
+
+/* Estilo base dos dois botões */
+#botao-sc1,
+#botao-sc8 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--cor1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, var(--cor3), var(--cor4));
+  border: 3px solid transparent; /* espaço já reservado */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover - não altera peso, nem padding, nem estrutura */
+#botao-sc1:hover,
+#botao-sc8:hover {
+  transform: scale(1.02);
+  background: linear-gradient(135deg, var(--cor4), var(--cor3));
+  border-color: var(--cor8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
