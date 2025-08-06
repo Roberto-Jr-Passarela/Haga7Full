@@ -23,6 +23,8 @@
 
 /* Frase principal */
 .slogan {
+  width: 75VW;
+  text-align: center;
   opacity: 1;
   animation: fadeOut 3s forwards; /* começa visível e desaparece */
 }

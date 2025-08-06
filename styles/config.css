@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*CONFIGURAÇÕES PARA AS CORES DE CADA FONTE, TAMNHO, E TIPOLOGIGA*/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 /* ---------- CORES GERAIS ---------- */
 :root {
     --cor1 : #F2E2C4;
@@ -31,15 +31,16 @@ h2 {
   color: var(--cor3);
 }
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cinzel', serif;
+  font-weight: lighter;
   color: var(--cor3);
 }
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   color: var(--cor1);
 }
 li {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   color: var(--cor3);
 }
 /*--------------------------------------------------*/
@@ -50,13 +51,13 @@ nav > a, li > a {
 }
 li > a {
   font-style: italic;
-  font-weight: bold;
-  font-size: 1em;
 }
 .logo {
   font-family: 'Cinzel', serif;
   font-weight: lighter;
-  font-size: 2em;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 /*--------------------------------------------------*/
 
@@ -64,8 +65,7 @@ li > a {
 /*Div inicial */
 .slogan {
   font-size: 4em;
-  /*color: var(--cor6);*/
-  /*color: olive;*/
+  color: var(--cor6);
 }
 /*--------------------------------------------------*/
 
@@ -76,8 +76,7 @@ small {
     color: var(--cor8);
 }
 footer > address > p >  a {
-  font-weight: bolder;
-  color: violet;
+  font-style: italic;
   color: var(--cor3);
 }
 /*--------------------------------------------------*/

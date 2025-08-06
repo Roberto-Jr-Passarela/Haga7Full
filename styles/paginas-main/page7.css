@@ -20,9 +20,18 @@
 @media (max-width: 680px){
     #img-sc7 {
         flex-wrap: wrap;
-    } 
+    }
     #img-sc7 > img {
         width: 90px;
         height: 90px;
+    }   
+}
+@media (max-width: 550px){
+    #img-sc7 {
+        flex-wrap: wrap;
+    } 
+    #img-sc7 > img {
+        width: 60px;
+        height: 60px;
     }   
 }
